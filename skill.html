@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript - SkillForge</title>
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="skill.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="home.html" class="logo">SkillForge</a>
+      <button class="hamburger" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="stats.html">Stats</a></li>
+        <li><a href="settings.html">Settings</a></li>
+        <li><a href="login.html" class="btn">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="skill-container">
+    <div class="container">
+      <div class="skill-header">
+        <a href="dashboard.html" class="back-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+          Back to Dashboard
+        </a>
+        <div class="skill-title">
+          <div class="skill-icon">💻</div>
+          <h1>JavaScript</h1>
+          <button class="btn btn-outline edit-btn">Edit Skill</button>
+        </div>
+        <p>Master JavaScript programming for web development</p>
+      </div>
+      
+      <div class="skill-content">
+        <!-- Progress Section -->
+        <section class="skill-progress-section card">
+          <h2>Your Progress</h2>
+          <div class="progress-overview">
+            <div class="progress-circle">
+              <div class="circle-bg"></div>
+              <div class="circle-progress" style="--progress: 85"></div>
+              <div class="progress-value">85%</div>
+            </div>
+            <div class="progress-stats">
+              <div class="stat-item">
+                <div class="stat-label">Days Practiced</div>
+                <div class="stat-value">42/60</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-label">Current Streak</div>
+                <div class="stat-value">12 days</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-label">Daily Goal</div>
+                <div class="stat-value">1 hour</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Tasks Section -->
+        <section class="skill-tasks card">
+          <div class="tasks-header">
+            <h2>Tasks</h2>
+            <button class="btn add-task-btn">+ Add Task</button>
+          </div>
+          
+          <div class="tasks-list">
+            <!-- Task 1 -->
+            <div class="task-item">
+              <label class="task-checkbox">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              <div class="task-content">
+                <h3>Complete JavaScript project</h3>
+                <p>Build a weather app using vanilla JavaScript</p>
+              </div>
+              <div class="task-actions">
+                <button class="task-edit" aria-label="Edit task">✏️</button>
+                <button class="task-delete" aria-label="Delete task">🗑️</button>
+              </div>
+            </div>
+            
+            <!-- Task 2 -->
+            <div class="task-item completed">
+              <label class="task-checkbox">
+                <input type="checkbox" checked>
+                <span class="checkmark"></span>
+              </label>
+              <div class="task-content">
+                <h3>Study ES6 features</h3>
+                <p>Arrow functions, destructuring, promises</p>
+              </div>
+              <div class="task-actions">
+                <button class="task-edit" aria-label="Edit task">✏️</button>
+                <button class="task-delete" aria-label="Delete task">🗑️</button>
+              </div>
+            </div>
+            
+            <!-- Task 3 -->
+            <div class="task-item">
+              <label class="task-checkbox">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              <div class="task-content">
+                <h3>Practice algorithms</h3>
+                <p>Solve 5 problems on LeetCode</p>
+              </div>
+              <div class="task-actions">
+                <button class="task-edit" aria-label="Edit task">✏️</button>
+                <button class="task-delete" aria-label="Delete task">🗑️</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Notes Section -->
+        <section class="skill-notes card">
+          <h2>Notes & Resources</h2>
+          <div class="notes-content">
+            <div class="notes-editor">
+              <textarea placeholder="Add notes about your JavaScript learning journey...">- Completed JavaScript.info tutorials
+- Need to practice async/await more
+- Bookmarked MDN JavaScript docs
+- Started React learning path</textarea>
+              <button class="btn save-notes">Save Notes</button>
+            </div>
+            <div class="resources-list">
+              <h3>Learning Resources</h3>
+              <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">MDN JavaScript Guide</a></li>
+                <li><a href="https://javascript.info" target="_blank" rel="noopener noreferrer">JavaScript.info Tutorials</a></li>
+                <li><a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/" target="_blank" rel="noopener noreferrer">FreeCodeCamp JavaScript Course</a></li>
+              </ul>
+              <button class="btn btn-outline add-resource">+ Add Resource</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-section">
+        <h3>SkillForge</h3>
+        <p>Master skills through consistent practice and measurable progress.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="stats.html">Statistics</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Legal</h3>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container copyright">
+      <p>&copy; <span class="current-year"></span> SkillForge. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="common.js"></script>
+  <script src="skill.js"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - SkillForge</title>
+  <meta name="description" content="Your SkillForge dashboard to track and manage your skills">
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="home.html" class="logo">SkillForge</a>
+      <button class="hamburger" aria-label="Menu" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="dashboard.html" class="active">Dashboard</a></li>
+        <li><a href="stats.html">Statistics</a></li>
+        <li><a href="settings.html">Settings</a></li>
+        <li><a href="login.html" class="btn">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="dashboard-container">
+    <div class="container">
+      <div class="dashboard-header">
+        <h1>Your Skills Dashboard</h1>
+        <a href="add-skill.html" class="btn">+ Add New Skill</a>
+      </div>
+      
+      <!-- Stats Overview -->
+      <section class="stats-overview">
+        <div class="stat-card">
+          <h3>Active Skills</h3>
+          <div class="stat-value">5</div>
+        </div>
+        <div class="stat-card">
+          <h3>Tasks Completed</h3>
+          <div class="stat-value">128</div>
+        </div>
+        <div class="stat-card">
+          <h3>Current Streak</h3>
+          <div class="stat-value">12 days</div>
+        </div>
+      </section>
+      
+      <!-- Skills Grid -->
+      <section class="skills-section">
+        <h2>Your Skills</h2>
+        <div class="skills-grid">
+          <!-- Skill Card 1 -->
+          <div class="skill-card card">
+            <div class="skill-header">
+              <div class="skill-icon">🎸</div>
+              <h3>Guitar</h3>
+            </div>
+            <div class="skill-progress">
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 65%"></div>
+              </div>
+              <span>65%</span>
+            </div>
+            <p>Daily practice: 30 minutes</p>
+            <div class="skill-actions">
+              <a href="skill.html" class="btn">View Details</a>
+            </div>
+          </div>
+          
+          <!-- Skill Card 2 -->
+          <div class="skill-card card">
+            <div class="skill-header">
+              <div class="skill-icon">💻</div>
+              <h3>JavaScript</h3>
+            </div>
+            <div class="skill-progress">
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 85%"></div>
+              </div>
+              <span>85%</span>
+            </div>
+            <p>Daily practice: Build 1 project</p>
+            <div class="skill-actions">
+              <a href="skill.html" class="btn">View Details</a>
+            </div>
+          </div>
+          
+          <!-- Skill Card 3 -->
+          <div class="skill-card card">
+            <div class="skill-header">
+              <div class="skill-icon">🏃‍♂️</div>
+              <h3>Running</h3>
+            </div>
+            <div class="skill-progress">
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 45%"></div>
+              </div>
+              <span>45%</span>
+            </div>
+            <p>Daily practice: Run 2 miles</p>
+            <div class="skill-actions">
+              <a href="skill.html" class="btn">View Details</a>
+            </div>
+          </div>
+          
+          <!-- Skill Card 4 -->
+          <div class="skill-card card">
+            <div class="skill-header">
+              <div class="skill-icon">🍳</div>
+              <h3>Cooking</h3>
+            </div>
+            <div class="skill-progress">
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 30%"></div>
+              </div>
+              <span>30%</span>
+            </div>
+            <p>Daily practice: Cook 1 new recipe</p>
+            <div class="skill-actions">
+              <a href="skill.html" class="btn">View Details</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Recent Activity -->
+      <section class="recent-activity">
+        <h2>Recent Activity</h2>
+        <div class="activity-list">
+          <div class="activity-item">
+            <div class="activity-icon">✅</div>
+            <div class="activity-content">
+              <p>Completed <strong>JavaScript Project</strong> task</p>
+              <small>2 hours ago</small>
+            </div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-icon">🎸</div>
+            <div class="activity-content">
+              <p>Practiced <strong>Guitar</strong> for 30 minutes</p>
+              <small>Yesterday</small>
+            </div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-icon">🏃‍♂️</div>
+            <div class="activity-content">
+              <p>Ran <strong>2.5 miles</strong> for Running practice</p>
+              <small>2 days ago</small>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-section">
+        <h3>SkillForge</h3>
+        <p>Master skills through consistent practice and measurable progress.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="stats.html">Statistics</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Legal</h3>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container copyright">
+      <p>&copy; <span class="current-year"></span> SkillForge. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="common.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

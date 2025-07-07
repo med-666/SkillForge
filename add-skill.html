@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Skill - SkillForge</title>
+  <meta name="description" content="Add a new skill to track in your SkillForge dashboard">
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="add-skill.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="home.html" class="logo">SkillForge</a>
+      <button class="hamburger" aria-label="Menu" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="stats.html">Statistics</a></li>
+        <li><a href="settings.html">Settings</a></li>
+        <li><a href="login.html" class="btn">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="add-skill-container">
+    <div class="container">
+      <div class="page-header">
+        <h1>Add New Skill</h1>
+        <a href="dashboard.html" class="btn btn-outline">← Back to Dashboard</a>
+      </div>
+      
+      <div class="add-skill-card card">
+        <form id="addSkillForm">
+          <div class="form-group">
+            <label for="skillName">Skill Name</label>
+            <input type="text" id="skillName" name="skillName" required 
+                   placeholder="e.g., JavaScript, Guitar, Cooking" aria-required="true">
+          </div>
+          
+          <div class="form-group">
+            <label for="skillCategory">Category</label>
+            <select id="skillCategory" name="skillCategory" required aria-required="true">
+              <option value="">Select a category</option>
+              <option value="technology">Technology</option>
+              <option value="music">Music</option>
+              <option value="sports">Sports & Fitness</option>
+              <option value="languages">Languages</option>
+              <option value="creative">Creative Arts</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="skillDescription">Description</label>
+            <textarea id="skillDescription" name="skillDescription" rows="4" 
+                      placeholder="Describe your skill goals..."></textarea>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="dailyTime">Daily Practice Time (minutes)</label>
+              <input type="number" id="dailyTime" name="dailyTime" min="5" max="240" value="30">
+            </div>
+            
+            <div class="form-group">
+              <label for="difficulty">Difficulty Level</label>
+              <select id="difficulty" name="difficulty">
+                <option value="beginner">Beginner</option>
+                <option value="intermediate" selected>Intermediate</option>
+                <option value="advanced">Advanced</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="goalDescription">Initial Goal</label>
+            <div class="goal-inputs">
+              <input type="text" id="goalDescription" placeholder="Goal description" required aria-required="true">
+              <input type="number" id="goalDays" placeholder="Days" min="1" max="365" value="30" required aria-required="true">
+            </div>
+          </div>
+          
+          <div class="form-actions">
+            <button type="button" class="btn btn-outline" id="cancelBtn">Cancel</button>
+            <button type="submit" class="btn">Create Skill</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-section">
+        <h3>SkillForge</h3>
+        <p>Master skills through consistent practice and measurable progress.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="stats.html">Statistics</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Legal</h3>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container copyright">
+      <p>&copy; <span class="current-year"></span> SkillForge. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="common.js"></script>
+  <script src="add-skill.js"></script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+.skill-container {
+  padding: 2rem 0;
+  min-height: calc(100vh - 80px);
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: var(--highlight);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: var(--accent);
+}
+
+.skill-header {
+  margin-bottom: 2rem;
+}
+
+.skill-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(117, 70, 232, 0.2);
+  border-radius: 50%;
+}
+
+.skill-title h1 {
+  font-size: 2.5rem;
+  margin-right: auto;
+  color: var(--highlight);
+}
+
+.edit-btn {
+  align-self: flex-start;
+}
+
+.skill-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/* Progress Section */
+.skill-progress-section h2 {
+  margin-bottom: 1.5rem;
+  color: var(--highlight);
+}
+
+.progress-overview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.progress-circle {
+  position: relative;
+  width: 180px;
+  height: 180px;
+}
+
+.circle-bg {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.circle-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(var(--accent) calc(var(--progress) * 3.6deg), transparent 0);
+  mask: radial-gradient(white 55%, transparent 56%);
+  -webkit-mask: radial-gradient(white 55%, transparent 56%);
+  transition: background 0.5s ease;
+}
+
+.progress-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.progress-stats {
+  flex: 1;
+  min-width: 250px;
+}
+
+.stat-item {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.stat-label {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Tasks Section */
+.skill-tasks h2 {
+  margin-bottom: 1.5rem;
+  color: var(--highlight);
+}
+
+.tasks-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tasks-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.task-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: background-color 0.2s ease;
+}
+
+.task-item:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.task-item.completed {
+  opacity: 0.7;
+}
+
+.task-checkbox {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  margin-right: 1rem;
+  margin-top: 0.3rem;
+}
+
+.task-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  display: block;
+  height: 25px;
+  width: 25px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.task-checkbox input:checked ~ .checkmark {
+  background-color: var(--accent);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.task-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.task-content {
+  flex: 1;
+}
+
+.task-content h3 {
+  margin-bottom: 0.25rem;
+  color: var(--text-light);
+}
+
+.task-content p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+.task-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.task-edit, .task-delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.2s ease;
+}
+
+.task-edit:hover, .task-delete:hover {
+  color: var(--text-light);
+}
+
+/* Notes Section */
+.skill-notes h2 {
+  margin-bottom: 1.5rem;
+  color: var(--highlight);
+}
+
+.notes-content {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.notes-editor {
+  flex: 2;
+  min-width: 300px;
+}
+
+.notes-editor textarea {
+  width: 100%;
+  height: 200px;
+  padding: 1rem;
+  background-color: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  color: white;
+  font-family: inherit;
+  font-size: 1rem;
+  resize: vertical;
+  margin-bottom: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.notes-editor textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(117, 70, 232, 0.2);
+}
+
+.save-notes {
+  width: 100%;
+}
+
+.resources-list {
+  flex: 1;
+  min-width: 250px;
+}
+
+.resources-list h3 {
+  margin-bottom: 1rem;
+  color: var(--highlight);
+}
+
+.resources-list ul {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.resources-list li {
+  margin-bottom: 0.8rem;
+}
+
+.resources-list a {
+  color: var(--highlight);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.resources-list a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.add-resource {
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skill-title {
+    flex-wrap: wrap;
+  }
+  
+  .progress-overview {
+    justify-content: center;
+  }
+  
+  .progress-stats {
+    width: 100%;
+  }
+  
+  .tasks-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .add-task-btn {
+    width: 100%;
+  }
+  
+  .notes-content {
+    flex-direction: column;
+  }
+}
